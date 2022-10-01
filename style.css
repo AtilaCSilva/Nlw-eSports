@@ -10,11 +10,10 @@ ul {
 }
 
 body {
-  background-image: url(./assets/bg.jpg);
+  background-image: url(./assets/background.png);
   background-position: top center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-color: #121214;
+  background-size: cover;
+  background-repeat: no-repeat; 
 }
 
 
@@ -22,6 +21,7 @@ body * {
   font-family: 'inter', sans-serif;
   line-height: 160%;
 }
+
 
 header {
   display: flex;
@@ -37,7 +37,7 @@ header {
 header div {
   width: 120px;
   margin: auto;
-  background-image:linear-gradient(90deg, rgba(121,28,193,1) 24%, rgba(250,235,0,1) 100%, rgba(99,149,171,1) 100%);
+  background-image:linear-gradient(90deg, rgba(0,0,0,1) 2%, rgba(255,0,0,1) 53%, rgba(255,224,0,1) 99%);
   border-radius: 50%;
   
   display: flex;
@@ -68,39 +68,56 @@ main {
 
 section {
   color: white;
-  /* background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%); */
-  background-image:linear-gradient(90deg, rgba(121,28,193,1) 24%, rgba(250,235,0,1) 100%, rgba(99,149,171,1) 100%);
-  padding-top: 4px;
+
+  background-image:linear-gradient(90deg, rgba(0,0,0,1) 2%, rgba(255,0,0,1) 53%, rgba(255,224,0,1) 99%);
+  padding-top: 6px;
   border-radius: 10px;
+  height: 1.3%;
+}
+
+.border-opennings {
+  color: white;
+ 
+  background-image:linear-gradient(90deg, rgba(0,0,0,1) 2%, rgba(255,0,0,1) 53%, rgba(255,224,0,1) 99%);
+  padding-top: 6px;
+  border-radius: 10px;
+  height: 0.8%;
+
 }
 
 section div {
-  background-color: #2A2634;
+  background-color: hsla(257, 15%, 18%, 0.807);
   padding: 32px;
   padding-top: 24px;
 
-  border-radius: 8px;
+ border-bottom-left-radius: 8px;
+ border-bottom-right-radius: 8px;
 }
 
 section h2 {
 
   letter-spacing: -0.47px;
+
 }
 
 
 section p {
   letter-spacing: -0.18px;
-  color: #A1A1AA;
+  color: #d5d5e0;
 
 }
 
 section ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 16px;
 
   margin-top: 24px;
+
 }
+
 
 section ul li {
   transition: transform .3s;
@@ -110,21 +127,31 @@ section ul li:hover {
   transform: scale(1.1);
 }
 
-.games-list img {
-  width: 90px;
+
+.animes-list img {
+  width: 110px;
   border-radius: 8px;
 }
 
-.channel-list img {
+.apps-list img {
   width: 70px;
   border-radius: 9.99rem;
   border: 1px solid #443E54;
+}
+
+.opennings-list {
+  /* display: flex;
+  justify-content: center; */
+  width: 100%;
+  border-radius: 8px;
+  
 }
 
 /* animation */
 
 header div {
   animation: fromTop .7s .2s backwards;
+  /* animation: animation var(--speed)linear infinite backwards; */
 }
 
 main section:nth-child(1) {
@@ -172,5 +199,15 @@ main section:nth-child(3) {
   to {
     opacity: 1;
     transform: translateX(0)
+  }
+}
+
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
